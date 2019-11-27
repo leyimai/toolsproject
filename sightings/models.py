@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext as _
 
 class Sighting(models.Model):
     latitude = models.FloatField()
@@ -13,10 +14,10 @@ class Sighting(models.Model):
     PM = 'PM'
     AM = 'AM'
 
-    SHIFT_CHOICES = {
+    SHIFT_CHOICES = (
             (PM, 'PM'),
             (AM, 'AM'),
-            {
+            )
 
     shift = models.CharField(
             help_text=_('shift'),
@@ -124,3 +125,6 @@ class Sighting(models.Model):
     runs_from = models.BooleanField(
             help_text=_('Squirrel was seen running from humans'),
             )
+
+    def __str__(self):
+        return self.unique_squirrel_id
