@@ -30,7 +30,20 @@ class Sighting(models.Model):
             help_text=_('Date'),
             )
 
-    age = models.IntegerField()
+    ADULT = 'Adult'
+    JUVENILE = 'Juvenile'
+    
+    AGE_CHOICES = {
+            (ADULT, 'Adult'),
+            (JUVENILE, 'Juvenile'),
+            }
+
+    age = models.CharField(
+            help_text=_('Age'),
+            max_length=20,
+            choices=AGE_CHOICES,
+            default=ADULT,
+            )
     
     GREY = 'Grey'
     CINNAMON = 'Cinnamon'
