@@ -25,7 +25,7 @@ class Command(BaseCommand):
                     row[i] = False
             return row
 
-        for i in range(len(rows[:5])):
+        for i in range(len(rows)):
             try:
                 row_raw = list(dict(rows[i]).values())
                 row = change_format(row_raw)
@@ -39,7 +39,7 @@ class Command(BaseCommand):
                     moans = row[23], tail_flags = row[24], tail_twitches = row[25], approaches = row[26], 
                     indifferent = row[27], runs_from = row[28],
                     )
-                print(s)
+                s.save()
             except Exception as e:
                 raise CommandError(e)
         self.stdout.write(self.style.SUCCESS('Successfully import squirrel data'))
