@@ -14,10 +14,10 @@ class Sighting(models.Model):
     PM = 'PM'
     AM = 'AM'
 
-    SHIFT_CHOICES = (
+    SHIFT_CHOICES = {
             (PM, 'PM'),
             (AM, 'AM'),
-            )
+    }
 
     shift = models.CharField(
             help_text=_('shift'),
