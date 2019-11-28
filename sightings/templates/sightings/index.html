@@ -1,6 +1,6 @@
-{% if latest_squirrel_list %}
+{% if latest_sighting_list %}
     <ul>
-	    {% for squirrel in latest_squirrel_list %}
+	    {% for sighting in latest_sighting_list %}
 	    <li><a href="/sightings/{{sighting.unique_squirrel_id }}">{{ sighting.unique_squirrel_id }}</a></li>
 	    {% endfor %}
 	    <ul>

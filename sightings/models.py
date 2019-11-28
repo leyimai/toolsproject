@@ -14,10 +14,10 @@ class Sighting(models.Model):
     PM = 'PM'
     AM = 'AM'
 
-    SHIFT_CHOICES = (
+    SHIFT_CHOICES = {
             (PM, 'PM'),
             (AM, 'AM'),
-            )
+            }
 
     shift = models.CharField(
             help_text=_('shift'),
@@ -70,7 +70,7 @@ class Sighting(models.Model):
             )
 
     running = models.BooleanField(
-            help_text=_('Squirrel was seen running')
+            help_text=_('Squirrel was seen running'),
             )
 
     chasing = models.BooleanField(
