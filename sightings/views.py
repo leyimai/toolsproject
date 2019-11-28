@@ -7,7 +7,7 @@ def index(request):
     latest_squirrel_list = Sighting.objects.all()
     template = loader.get_template('sightings/index.html')
     context = {
-            'Latest Squirrel List': latest_squirrel_list,
+            'latest_squirrel_list': latest_squirrel_list,
             }
     return HttpResponse(template.render(context, request))
 
