@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
+
 class Sighting(models.Model):
     latitude = models.FloatField()
 
@@ -14,10 +15,10 @@ class Sighting(models.Model):
     PM = 'PM'
     AM = 'AM'
 
-    SHIFT_CHOICES = (
+    SHIFT_CHOICES = {
             (PM, 'PM'),
             (AM, 'AM'),
-            )
+    }
 
     shift = models.CharField(
             help_text=_('shift'),
@@ -30,7 +31,20 @@ class Sighting(models.Model):
             help_text=_('Date'),
             )
 
-    age = models.IntegerField()
+    ADULT = 'Adult'
+    JUVENILE = 'Juvenile'
+    
+    AGE_CHOICES = {
+            (ADULT, 'Adult'),
+            (JUVENILE, 'Juvenile'),
+            }
+
+    age = models.CharField(
+            help_text=_('Age'),
+            max_length=20,
+            choices=AGE_CHOICES,
+            default=ADULT,
+            )
     
     GREY = 'Grey'
     CINNAMON = 'Cinnamon'
@@ -70,7 +84,7 @@ class Sighting(models.Model):
             )
 
     running = models.BooleanField(
-            help_text=_('Squirrel was seen running')
+            help_text=_('Squirrel was seen running'),
             )
 
     chasing = models.BooleanField(
@@ -128,3 +142,4 @@ class Sighting(models.Model):
 
     def __str__(self):
         return self.unique_squirrel_id
+
