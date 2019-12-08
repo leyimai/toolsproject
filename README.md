@@ -13,13 +13,14 @@ Squirrel tracker is a web application developed with Django Framework for users 
 Main Features
 -------------------
 Squirrel Tracker app includes two sub-apps with the following features:
+
 Sightings: a site that lists all squirrels, with links to edit each squirrel based on unique squirrel ID or add new squirrels.
 
     - /sightings/add
     - /sightings/<unique_squirrel_id>
     - /sightings/stats
     
-Map: a map that visualizes the location of the reported squirrels
+Map: an interactive map that visualizes the reported squirrels' locations. The map application was built with Leaflet and OpenStreetMaps.See documentation of Leaflet at https://leafletjs.com/reference-1.6.0.html.
     
     - /map
 
