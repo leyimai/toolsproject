@@ -29,7 +29,20 @@ def add(request):
     return render(request, 'sightings/details.html', context)
 
 def stats(request):
-    return HttpResponse('Hi')
+    template = loader.get_template('sightings/stats.html')
+    total_number = Sighting.objects.all().count()
+    pm_shift = Sighting.objects.filter(shift='PM').count()
+    am_shift = Sighting.objects.filter(shift='AM').count()
+    num_of_adults = Sighting.objects.filter(age='Adult').count()
+    num_of_climbing = Sighting.objects.filter(climbing = True).count()
+    context = {
+            'total_number': total_number,
+            'pm_shift': pm_shift,
+            'am_shift': am_shift,
+            'num_of_adults': num_of_adults,
+            'num_of_climbing': num_of_climbing,
+            }
+    return HttpResponse(template.render(context, request))
 
 def details(request, unique_squirrel_id):
     sighting = Sighting.objects.get(unique_squirrel_id = unique_squirrel_id)
