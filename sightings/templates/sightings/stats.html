@@ -1,8 +1,50 @@
-<h1> Squirrel Tracker Statistics </h1>
-<ul>
-	<li>The total number of squirrels is: {{ total_number }}</li>
-	<li>The total number of squirrels spotted in the afternoon: {{ pm_shift }}</li>
-	<li>The total number of squirrels spotted in the morning: {{ am_shift }}</li>
-	<li>The total number of adult squirrels: {{ num_of_adults }}</li>
-	<li>The total number of squirrels spotted climbing: {{ num_of_climbing }}</li>
-<ul>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<table border="1" cellspacing="1" cellpadding="1">
+	<tr align="left">
+                <th>Squirrel Tracker Statistics</th>
+		<th>Number</th>
+	</tr>
+	<tr>
+		<td>Total number of squirrels</td>
+		<td>{{ total_number }}</td>
+	</tr>
+	<tr>
+		<td>Total number of squirrels spotted in the morning</td>
+		<td>{{ am_shift }}</td>
+	</tr>
+	<tr>
+		<td>Total number of squirrels spotted in the afternoon</td>
+		<td>{{ pm_shift }}</td>
+	</tr>
+	<tr>
+		<td>Total number of adult squirrels</td>
+		<td>{{ num_of_adults }}</td>
+	</tr>
+	<tr>
+		<td>Total number of juvenile squirrels</td>
+		<td>{{ num_of_juveniles}} </td>
+	</tr>
+	<tr>
+		<td>Total number of squirrels spotted climbing</td>
+		<td>{{ num_of_climbing }}</td>
+	</tr>
+</table>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

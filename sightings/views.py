@@ -34,12 +34,14 @@ def stats(request):
     pm_shift = Sighting.objects.filter(shift='PM').count()
     am_shift = Sighting.objects.filter(shift='AM').count()
     num_of_adults = Sighting.objects.filter(age='Adult').count()
+    num_of_juveniles = Sighting.objects.filter(age='Juvenile').count()
     num_of_climbing = Sighting.objects.filter(climbing = True).count()
     context = {
             'total_number': total_number,
             'pm_shift': pm_shift,
             'am_shift': am_shift,
             'num_of_adults': num_of_adults,
+            'num_of_juveniles':num_of_juveniles,
             'num_of_climbing': num_of_climbing,
             }
     return HttpResponse(template.render(context, request))
