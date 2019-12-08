@@ -9,7 +9,6 @@ class Command(BaseCommand):
         parser.add_argument('path', type=str, help="file path")
 
     def handle(self, *args, **options):
-<<<<<<< HEAD
         path = options['path']
         with open(path,'r') as fp:
             rows = list(csv.DictReader(fp))
