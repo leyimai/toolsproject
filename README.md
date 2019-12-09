@@ -17,7 +17,7 @@ Click the following link to the server to run the web application:
 
 Main Features
 -------------------
-Squirrel Tracker app includes two sub-apps with the following features:
+Squirrel Tracker app includes two sub-apps (sightings and map) with the following features:
 
 Sightings (Main Page): a site that lists all squirrels, with links to edit or add squirrels, view squirrel statistics and the map. This site uses Bootstrap4 for styling (reference at https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
