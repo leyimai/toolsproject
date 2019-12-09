@@ -10,7 +10,7 @@ Squirrel tracker is a web application developed with Django Framework for users 
 How to run the application?
 -----------------------------
 
-The link to the server to run the application:
+Click the following link to the server to run the web application:
 
     - https://splendid-window-255500.appspot.com/sightings
 
