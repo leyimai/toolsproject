@@ -10,14 +10,14 @@ Squirrel tracker is a web application developed with Django Framework for users 
 How to run the application?
 -----------------------------
 
-The link to the server to run the application:
+Click the following link to the server to run the web application:
 
     - https://splendid-window-255500.appspot.com/sightings
 
 
 Main Features
 -------------------
-Squirrel Tracker app includes two sub-apps with the following features:
+Squirrel Tracker app includes two sub-apps (Sightings and Map) with the following features:
 
 Sightings (Main Page): a site that lists all squirrels, with links to edit or add squirrels, view squirrel statistics and the map. This site uses Bootstrap4 for styling (reference at https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
