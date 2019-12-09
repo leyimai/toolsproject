@@ -4,7 +4,7 @@ This is Squirrel Tracker 1.0
 
 What is it?
 -------------------
-Squirrel tracker is a web application developed with Django Framework for users to keep track of all the spotted squirrels in NYC. On the app, Users are allowed to add, update, and view squirrel data. The current dataset includes the 2018 Central Park Squirrel Census data，which can be downloaded at NYCOpenData https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/data.
+Squirrel tracker is a web application developed with Django Framework for users to keep track of all the spotted squirrels in Central Park, NYC. On the app, Users are allowed to add, update, and view squirrel sightings. The current dataset includes the 2018 Central Park Squirrel Census data，which can be downloaded at NYCOpenData https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/data.
 
 
 How to run the application?
@@ -19,7 +19,11 @@ Main Features
 -------------------
 Squirrel Tracker app includes two sub-apps with the following features:
 
-Sightings: a site that lists all squirrels, with links to edit or add squirrels, view squirrel statistics and the map.
+Sightings (Main Page): a site that lists all squirrels, with links to edit or add squirrels, view squirrel statistics and the map. 
+
+    - https://splendid-window-255500.appspot.com/sightings
+
+Following are the links to add a squirrel sighting, update an existing sighting and view sighting statistics, respectively.
 
     - https://splendid-window-255500.appspot.com/sightings/add
     - https://splendid-window-255500.appspot.com/sightings/<unique_squirrel_id>
